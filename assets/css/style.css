@@ -1,0 +1,94 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #eee;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #555;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+input {
+    width: 300px;
+    height: 30px;
+    padding: 10px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    font-size: 1.8rem;
+    cursor: text;
+}
+
+.label {
+    position: relative;
+    margin-top: 60px;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: text;
+
+    font-weight: 500;
+}
+
+label span {
+    margin-left: -4px;
+    /* position: absolute; */
+    display: inline-block;
+    position: relative;
+    transition: var(--delay) ease-out;
+}
+label span:nth-child(1) {
+    margin-left: 0;
+}
+
+input:not(:placeholder-shown) + label span,
+input:focus + label span {
+    transform: translateY(-25px);
+    color: #2cccff;
+}
+
+input:not(:placeholder-shown),
+input:focus {
+    border-color: #2cccff;
+}
+
+.btn {
+    margin-top: 30px;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: #2cccff;
+    font-size: 1.8rem;
+}
+
+p {
+    margin-top: 30px;
+    color: #eee;
+}
+
+p a {
+    color: #2cccff;
+}
