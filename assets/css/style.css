@@ -1,6 +1,6 @@
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #eee;
+    background-color: #6a5af9;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
@@ -8,87 +8,45 @@ body {
     height: 100vh;
 }
 
-form {
+.container {
     display: flex;
-    flex-direction: column;
-    background-color: #555;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-}
-
-h1 {
-    font-size: 3rem;
-    font-weight: 800;
-}
-
-input {
-    width: 300px;
-    height: 30px;
-    padding: 10px 0;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid #fff;
-    outline: none;
-    font-size: 1.8rem;
-    cursor: text;
-}
-
-.label {
-    position: relative;
-    margin-top: 60px;
-}
-
-label {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    font-size: 1.8rem;
-    color: #fff;
-    cursor: text;
-
-    font-weight: 500;
-}
-
-label span {
-    margin-left: -4px;
-    /* position: absolute; */
-    display: inline-block;
-    position: relative;
-    transition: var(--delay) ease-out;
-}
-label span:nth-child(1) {
-    margin-left: 0;
-}
-
-input:not(:placeholder-shown) + label span,
-input:focus + label span {
-    transform: translateY(-25px);
-    color: #2cccff;
-}
-
-input:not(:placeholder-shown),
-input:focus {
-    border-color: #2cccff;
+    gap: 40px;
 }
 
 .btn {
-    margin-top: 30px;
-    width: 100%;
-    padding: 15px 0;
-    border-radius: 4px;
-    border: none;
-    outline: none;
-    background-color: #2cccff;
-    font-size: 1.8rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    font-size: 2rem;
+    user-select: none;
+    position: relative;
+    margin: 30px 30px 16px;
+    padding: 18px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    color: #333;
+    font-weight: 500;
+    -webkit-box-shadow: 0 0 20px #eee;
+    /* box-shadow: 0 0 20px #eee; */
+    border-radius: 10px;
+    cursor: pointer;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#f6d365),
+        color-stop(51%, #fda085),
+        to(#f6d365)
+    );
+    background-image: -o-linear-gradient(left, #f6d365 0%, #fda085 51%, #f6d365 100%);
+    background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
 }
 
-p {
-    margin-top: 30px;
-    color: #eee;
-}
-
-p a {
-    color: #2cccff;
+.btn:hover {
+    background-position: right center;
 }
